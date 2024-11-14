@@ -33,21 +33,27 @@ export default {
 
 colone project 
 
+1 :- Install Node Modules
 
-1 :- install node modules
- command  :- npm i
+Command: npm i
+This installs all necessary dependencies listed in your package.json.
 
-2 :- start project
-  command :- npm run dev
-3 :- Mock Api start 
-  open first git bash on terminal and give command 
-  command :- json-server --watch db.json --port 3031
-  in this command port 3031 is compulsory
+2:- Start the Project
 
-  if it's not start then install 
+Command: npm run dev
+This command will start your development server. Make sure your setup in package.json includes a dev script (e.g., "dev": "next dev" for Next.js or "dev": "vite" for Vite).
 
-  command :-npm install -g json-server
+3:- Start the Mock API
 
+Open a terminal window (Git Bash or any terminal you prefer).
+
+Command: json-server --watch db.json --port 3031
+
+This command will start json-server to serve data from db.json on port 3031. Note: The port 3031 is specified as required, so make sure to keep this port free.
+
+If json-server is not installed globally, install it first with:
+
+Command: npm install -g json-server
 
 
 
