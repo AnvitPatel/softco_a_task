@@ -26,18 +26,16 @@ interface ITemsArray {
   id: string;
   mainItemName: string;
   mainTotalPrice: number | null;
-  items: [
-    {
-      itemsId: string;
-      item: string;
-      desc: string;
-      unit: string;
-      quantity: number | null;
-      price: number | null;
-      margin: number | null;
-      mainPrice: number | null;
-    }
-  ];
+  items: {
+    itemsId: string;
+    item: string;
+    desc: string;
+    unit: string;
+    quantity: number | null;
+    price: number | null;
+    margin: number | null;
+    mainPrice: number | null;
+  }[];
 }
 const EstimatesAddEdit = () => {
   const navigate = useNavigate();
@@ -617,7 +615,7 @@ const EstimatesAddEdit = () => {
                       <div
                         className="bg-black text-white rounded-full cursor-pointer"
                         onClick={() => {
-                          const dataCollect = [...mainEstimate];
+                          let dataCollect = [...mainEstimate];
                           if (dataCollect[i].items.length - 1 === j) {
                             if (
                               y.desc &&
@@ -627,19 +625,58 @@ const EstimatesAddEdit = () => {
                               y.quantity &&
                               y.unit
                             ) {
-                              dataCollect[i].items.push({
-                                itemsId: `IT-${Date.now()}-${Math.floor(
-                                  Math.random() * 10000
-                                )}`,
-                                item: "",
-                                desc: "",
-                                unit: "",
-                                quantity: null,
-                                price: null,
-                                margin: null,
-                                mainPrice: null,
-                              });
-                              setMainEstimate(dataCollect);
+                              const dataCollect2 = dataCollect.map(
+                                (item, index) =>
+                                  index === i
+                                    ? {
+                                        ...item,
+                                        items: [
+                                          ...(item.items || []),
+                                          {
+                                            itemsId: `IT-${Date.now()}-${Math.floor(
+                                              Math.random() * 10000
+                                            )}`,
+                                            item: "",
+                                            desc: "",
+                                            unit: "",
+                                            quantity: null,
+                                            price: null,
+                                            margin: null,
+                                            mainPrice: null,
+                                          },
+                                        ],
+                                      }
+                                    : item
+                              );
+                              // const collectSome = [
+                              //   ...(dataCollect[i].items || []),
+                              //   {
+                              //     itemsId: `IT-${Date.now()}-${Math.floor(
+                              //       Math.random() * 10000
+                              //     )}`,
+                              //     item: "",
+                              //     desc: "",
+                              //     unit: "",
+                              //     quantity: null,
+                              //     price: null,
+                              //     margin: null,
+                              //     mainPrice: null,
+                              //   },
+                              // ];
+                              // dataCollect[i].items = collectSome;
+                              // dataCollect[i].items.push({
+                              //   itemsId: `IT-${Date.now()}-${Math.floor(
+                              //     Math.random() * 10000
+                              //   )}`,
+                              //   item: "",
+                              //   desc: "",
+                              //   unit: "",
+                              //   quantity: null,
+                              //   price: null,
+                              //   margin: null,
+                              //   mainPrice: null,
+                              // });
+                              setMainEstimate(dataCollect2);
                             } else {
                               message.error("please fill all fields");
                             }
@@ -650,33 +687,74 @@ const EstimatesAddEdit = () => {
                       </div>
                       <div
                         className="bg-slate-300 text-black rounded-full cursor-pointer"
+                        // onClick={() => {
+                        //   const dataCollect = [...mainEstimate];
+                        //   if (
+                        //     dataCollect.length === 1 &&
+                        //     dataCollect[i].items.length === 1
+                        //   ) {
+                        //     message.error("One row is compulsory");
+                        //   } else {
+                        //     const collSome = [...dataCollect[i].items];
+                        //     collSome.splice(j, 1);
+                        //     dataCollect[i].items = collSome;
+                        //     let leg = dataCollect[i]?.items.length ?? 0;
+
+                        //     if (leg <= 0) {
+                        //       dataCollect.splice(i, 1);
+                        //     }
+                        //     if (dataCollect[i]) {
+                        //       dataCollect[i].mainTotalPrice = parseFloat(
+                        //         dataCollect[i].items
+                        //           .reduce((total, item) => {
+                        //             if (item.mainPrice != null) {
+                        //               total += item.mainPrice;
+                        //             }
+                        //             return total;
+                        //           }, 0)
+                        //           .toFixed(2)
+                        //       );
+                        //     }
+                        //     setMainEstimate(dataCollect);
+                        //   }
+                        // }}
                         onClick={() => {
-                          const dataCollect = [...mainEstimate];
+                          const dataCollect = mainEstimate.map(
+                            (item, index) => ({
+                              ...item,
+                              items: index === i ? [...item.items] : item.items,
+                            })
+                          );
+
                           if (
                             dataCollect.length === 1 &&
                             dataCollect[i].items.length === 1
                           ) {
-                            message.error("Ablest one row is compulsory");
+                            message.error("One row is compulsory");
                           } else {
+                            // Create a modified copy of items without the item at index j
                             dataCollect[i].items.splice(j, 1);
-                            let leg = dataCollect[i]?.items.length ?? 0;
 
-                            if (leg <= 0) {
+                            // Check if items array is empty, and if so, remove the entire parent element
+                            if (dataCollect[i].items.length <= 0) {
                               dataCollect.splice(i, 1);
                             }
+
+                            // Recalculate mainTotalPrice if dataCollect[i] still exists
+                            debugger;
                             if (dataCollect[i]) {
                               dataCollect[i].mainTotalPrice = parseFloat(
                                 dataCollect[i].items
                                   .reduce((total, item) => {
-                                    if (item.mainPrice != null) {
-                                      total += item.mainPrice;
-                                    }
-                                    return total;
+                                    return item.mainPrice != null
+                                      ? total + item.mainPrice
+                                      : total;
                                   }, 0)
                                   .toFixed(2)
                               );
                             }
-                            setMainEstimate(dataCollect);
+
+                            setMainEstimate(dataCollect); // Update the state with the modified data
                           }
                         }}
                       >
@@ -714,7 +792,7 @@ const EstimatesAddEdit = () => {
           </div>
           <div className="flex gap-4 my-4 px-3 justify-end">
             <Button
-              htmlType="submit"
+              htmlType="button"
               size={"large"}
               onClick={() => navigate("/estimates")}
             >

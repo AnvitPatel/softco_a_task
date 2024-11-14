@@ -23,18 +23,16 @@ export interface sendData {
     id: string;
     mainItemName: string;
     mainTotalPrice: number | null;
-    items: [
-      {
-        itemsId: string;
-        item: string;
-        desc: string;
-        unit: string;
-        quantity: number | null;
-        price: number | null;
-        margin: number | null;
-        mainPrice: number | null;
-      }
-    ];
+    items: {
+      itemsId: string;
+      item: string;
+      desc: string;
+      unit: string;
+      quantity: number | null;
+      price: number | null;
+      margin: number | null;
+      mainPrice: number | null;
+    }[];
   }[];
 }
 

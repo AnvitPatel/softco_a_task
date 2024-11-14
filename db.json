@@ -78,7 +78,7 @@
       "id": "1731546570237-1036",
       "client": "sxfczxc",
       "project": "Just test 3",
-      "status": "Processing",
+      "status": "Created",
       "userID": "1731301233055-1925",
       "createdDate": "14 Nov 2024",
       "updatedDate": "14 Nov 2024",
@@ -131,6 +131,88 @@
               "price": 5,
               "margin": 5,
               "mainPrice": 351.75
+            }
+          ]
+        },
+        {
+          "id": "1731560949496-701",
+          "mainItemName": "zxxzczxcvzxczxc",
+          "mainTotalPrice": 730.73,
+          "items": [
+            {
+              "itemsId": "IT-1731560949497-9183",
+              "item": "xzvcxv",
+              "desc": "cxvxcv",
+              "unit": "cxvcxv",
+              "quantity": 67,
+              "price": 7,
+              "margin": 5,
+              "mainPrice": 492.45
+            },
+            {
+              "itemsId": "IT-1731560969808-7680",
+              "item": "zdxczxc",
+              "desc": "xzcxzc",
+              "unit": "zxczxc",
+              "quantity": 45,
+              "price": 5,
+              "margin": 5.9,
+              "mainPrice": 238.28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1731561568850-815",
+      "client": "xzczxc",
+      "project": "pj",
+      "status": "Rejected",
+      "userID": "1731301233055-1925",
+      "createdDate": "14 Nov 2024",
+      "updatedDate": "14 Nov 2024",
+      "mainItemsDetail": [
+        {
+          "id": "1731561517620-5661",
+          "mainItemName": "xzczxcxz",
+          "mainTotalPrice": 28.61,
+          "items": [
+            {
+              "itemsId": "IT-1731561517620-9369",
+              "item": "xzcxzc",
+              "desc": "xzcxzc",
+              "unit": "xzczxc",
+              "quantity": 3,
+              "price": 3,
+              "margin": 33,
+              "mainPrice": 11.97
+            },
+            {
+              "itemsId": "IT-1731561539336-4763",
+              "item": "xzczxc",
+              "desc": "xzczxc",
+              "unit": "xzczxc",
+              "quantity": 4,
+              "price": 4,
+              "margin": 4,
+              "mainPrice": 16.64
+            }
+          ]
+        },
+        {
+          "id": "1731564381792-5935",
+          "mainItemName": "sxdfsxzczxc",
+          "mainTotalPrice": 9.27,
+          "items": [
+            {
+              "itemsId": "IT-1731564381792-3917",
+              "item": "xzczxcxz",
+              "desc": "cxcxzcxzc",
+              "unit": "xzcxzc",
+              "quantity": 3,
+              "price": 3,
+              "margin": 3,
+              "mainPrice": 9.27
             }
           ]
         }
