@@ -1,0 +1,140 @@
+{
+  "users": [
+    {
+      "id": "1731301233055-1925",
+      "email": "anvit@gmail.com",
+      "password": "Anvit@1234",
+      "username": "Anvit Patel"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1731455628292-8201",
+      "customer": "michael jones",
+      "referenceNumber": "abc1234",
+      "projectName": "Just test2",
+      "projectNumber": "abcd123445",
+      "areaLocation": "Ahmedabad",
+      "address": "Ahmedabad",
+      "dueDate": "14/11/2024",
+      "contact": "5555555551",
+      "manager": "chaman bhai",
+      "staff": "security",
+      "status": "Rejected",
+      "email": "michael@gmail.com",
+      "userID": "1731301233055-1925"
+    },
+    {
+      "id": "1731456029883-3063",
+      "customer": "sarah williams",
+      "referenceNumber": "HFFF123345",
+      "projectName": "Just test 3",
+      "projectNumber": "xyz1234",
+      "areaLocation": "ahmedabad",
+      "address": "ahmedabad",
+      "dueDate": "14/11/2024",
+      "contact": "8888888888",
+      "manager": "anvit pate",
+      "staff": "security",
+      "status": "Completed",
+      "email": "saeah@gmail.com",
+      "userID": "1731301233055-1925"
+    },
+    {
+      "id": "1731480416992-9749",
+      "customer": "isabella anderson",
+      "referenceNumber": "pokkjjjfffff",
+      "projectName": "pj",
+      "projectNumber": "000889",
+      "areaLocation": "ahmedabad",
+      "address": "ahmedabad",
+      "dueDate": "15/11/2024",
+      "contact": "888885555",
+      "manager": "sachin",
+      "staff": "developer",
+      "status": "Processing",
+      "email": "isabella@gmail.com",
+      "userID": "1731301233055-1925"
+    },
+    {
+      "id": "1731483183761-3672",
+      "customer": "ella lewis",
+      "referenceNumber": "oopopop",
+      "projectName": "pj - prijems",
+      "projectNumber": "0009",
+      "areaLocation": "ahmedabad",
+      "address": "ahmedabad",
+      "dueDate": "15/11/2024",
+      "contact": "5656565656",
+      "manager": "mahesh bhai",
+      "staff": "project man",
+      "status": "Completed",
+      "email": "ella@gmail.com",
+      "userID": "1731301233055-1925"
+    }
+  ],
+  "estimates": [
+    {
+      "id": "1731546570237-1036",
+      "client": "sxfczxc",
+      "project": "Just test 3",
+      "status": "Processing",
+      "userID": "1731301233055-1925",
+      "createdDate": "14 Nov 2024",
+      "updatedDate": "14 Nov 2024",
+      "mainItemsDetail": [
+        {
+          "id": "1731546530963-2756",
+          "mainItemName": "zXZX",
+          "mainTotalPrice": 101.97,
+          "items": [
+            {
+              "itemsId": "IT-1731546530963-5972",
+              "item": "zXZX",
+              "desc": "zXz",
+              "unit": "zxZX",
+              "quantity": 33,
+              "price": 3,
+              "margin": 3,
+              "mainPrice": 101.97
+            }
+          ]
+        },
+        {
+          "id": "1731546547467-2946",
+          "mainItemName": "ZXCxzc",
+          "mainTotalPrice": 16.64,
+          "items": [
+            {
+              "itemsId": "IT-1731546547467-5908",
+              "item": "xzcxzc",
+              "desc": "xzcxzc",
+              "unit": "xzczxzc",
+              "quantity": 4,
+              "price": 4,
+              "margin": 4,
+              "mainPrice": 16.64
+            }
+          ]
+        },
+        {
+          "id": "1731546558515-2913",
+          "mainItemName": "zcxxzczxzc",
+          "mainTotalPrice": 351.75,
+          "items": [
+            {
+              "itemsId": "IT-1731546558515-5404",
+              "item": "xcxzc",
+              "desc": "xzczxc",
+              "unit": "xzcxzc",
+              "quantity": 67,
+              "price": 5,
+              "margin": 5,
+              "mainPrice": 351.75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

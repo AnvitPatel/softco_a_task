@@ -1,0 +1,13 @@
+/*-------------------------------------------------
+   Compare Page CSS
+---------------------------------------------------*/
+.gi-compare-box {
+	@include custom-scroll-bar;
+	.gi-compare-col {
+		&:hover {
+			.gi-action {
+				opacity: 1;
+			}
+		}
+	}
+}

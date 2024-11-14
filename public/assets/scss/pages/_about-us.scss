@@ -1,0 +1,49 @@
+/*-------------------------------------------------
+   About Page CSS
+---------------------------------------------------*/
+
+/**===== About Section =====**/
+.gi-about {
+	.gi-about-img {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, calc(50% - 12px));
+		grid-row-gap: 24px;
+		grid-column-gap: 24px;
+		.v-img {
+			height: 100%;
+			grid-column-end: span 1;
+			grid-row-end: span 2;
+		}
+		.h-img {
+			height: 100%;
+			grid-column-end: span 1;
+			grid-row-end: span 1;
+		}
+	}
+}
+
+/*=====  Testimonial Section CSS  =====*/
+#gi-testimonial-slider {
+	margin-bottom: -30px;
+	text-align: center;
+}
+.svg_img.test_svg.top {
+	width: 45px;
+}
+.svg_img.test_svg.bottom {
+	width: 45px;
+}
+
+/*=====  Team Section CSS  =====*/
+.gi-team-section {
+	.gi-team-box {
+		&:hover {
+			.gi-team-imag {
+				.gi-team-socials { 
+					bottom: 15px;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

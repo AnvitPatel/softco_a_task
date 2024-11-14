@@ -1,0 +1,141 @@
+/*-------------------------------------------------
+  Cart Page CSS
+---------------------------------------------------*/
+.gi-cart-section {
+	.gi-sidebar-wrap {
+		.gi-ship-title {
+			&::after {
+				content: '\f107';
+				position: relative;
+				font-family: $gIcons;
+				font-size: 18px;
+				color: $text-color;
+				font-weight: 400;
+			}
+		}
+	}
+}
+.gi-cart-content {
+	.table-content {
+		table {
+			tbody {
+				>tr {
+					td {
+						.cart-qty-plus-minus {
+							input {
+								background: transparent none repeat scroll 0 0;
+							}
+							.ms_cart_qtybtn {
+								color: $title-color;
+								float: left;
+								font-size: 20px;
+								height: auto;
+								margin: 0;
+								padding: 0;
+								width: 40px;
+								height: 38px;
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								justify-content: center;
+							}
+							.ms_qtybtn {
+								width: $width-100;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								cursor: pointer;
+								font-size: 0;
+								color: $title-color;
+								height: 19px;
+								position: relative;
+								&:before {
+									width: $width-100;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									cursor: pointer;
+									font-size: 20px;
+									color: $title-color;
+									height: 19px;
+									position: absolute;
+									top: 0;
+									left: 0;
+									right: 0;
+									content: '';
+									font-family: $Icon-fontfamily-gIcons;
+									overflow: hidden;
+									font-size: 15px;
+								}
+							}
+							.dec.ms_qtybtn {
+								&:before {
+									padding-bottom: 4px;
+									content: '\f107';
+									color: $text-color-999;
+								}
+							}
+							.inc.ms_qtybtn {
+								&:before {
+									padding-top: 4px;
+									content: '\f106';
+									color: $text-color-999;
+								}
+							}
+						}
+					}
+					td.gi-cart-pro-remove {
+						a {
+							&:hover {
+								i {
+									color: #ff9d9d;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.gi-cart-form {
+	select {
+		padding: 0 15px;
+		webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		outline: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border: 0 !important;
+		background: $white;
+		background-image: none;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		padding: 0 10px;
+		color: $text-color;
+		cursor: pointer;
+		border-radius: $main-border-radius;
+	}
+	.gi-cart-select-inner {
+		&::after {
+			content: '\f107';
+			position: absolute;
+			font-family: $gIcons;
+			top: 0;
+			right: 0;
+			padding: 0 10px;
+			cursor: pointer;
+			pointer-events: none;
+			font-size: 18px;
+			display: flex;
+			height: 50px;
+			line-height: 1;
+			justify-content: center;
+			align-items: center;
+			color: $text-color;
+		}
+	}
+}

@@ -1,0 +1,262 @@
+/*===== New Product 2 css =====*/
+.gi-products {
+	.gi-product-slider {
+		.owl-stage, .slick-track {
+			display: flex;
+		}
+	}
+}
+.gi-product-slider {
+	.gi-product-content {
+		display: flex !important;
+	}
+}
+.gi-product-card {
+	display: flex;
+}
+.gi-product-detail {
+	display: flex;
+}
+.gi-products-block {
+	display: flex;
+}
+.deal-slick-carousel {
+	.slick-track {
+		height: 100%;
+		.slick-slide {
+			display: flex;
+		}
+	}
+}
+.width-100, .width-50 {
+	.gi-product-inner {
+		.gi-pro-content {
+			.gi-pro-title {
+				height: auto;
+			}
+		}
+	}
+}
+.gi-product-inner {
+	.gi-pro-image {
+		.percentage {
+			position: absolute;
+			z-index: 8;
+			top: 15px;
+			right: 15px;
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 29px;
+			padding: 0 7px;
+			text-align: center;
+			text-transform: uppercase;
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $main-primary-color;
+		}
+		.gi-pro-actions {
+			.gi-btn-group {
+				&:hover {
+					background-color: $main-primary-color;
+					i {
+						color: $white;
+					}
+				}
+			}
+			.wishlist.active, .compare.active {
+				background-color: $main-primary-color;
+				i {
+					color: $white;
+				}
+			}
+		}
+	}
+	.gi-pro-option{
+		bottom: -20px;
+	}
+	&:hover {
+		.gi-pro-actions {
+			opacity: 1;
+			right: 0px;
+			padding-right: 10px;
+		}
+		.gi-pro-option{
+			opacity: 1;
+			bottom: -10px;
+            background: $white;
+		}
+		.gi-pro-image {
+			.image {
+				img {
+					transform: scale(1.1);
+					&:not(:last-child) {
+						opacity: 0;
+					}
+				}
+				img.hover-image {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.gi-pro-content {
+		.btn {
+			align-self: center;
+		}
+	}
+	.gi-pro-image.pro-loading {
+		&:before {
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background-color: $white;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			content: '';
+			opacity: 0.5;
+			z-index: 98;
+		}
+	}
+}
+.gi-pro-variation {
+	.gi-pro-variation-inner.gi-pro-variation-color {
+		.gi-pro-variation-content {
+			li {
+				border-radius: 100%;
+				span {
+					width: 16px;
+					height: 16px;
+					display: block;
+					border-radius: 100%;
+				}
+				&:hover {
+					border: 1px solid $title-color;
+				}
+			}
+		}
+	}
+}
+.gi-pro-tab{
+	ul{
+		li.active {
+			a{
+				color: $main-primary-color;
+			}
+		}
+	}
+}
+button.btn-close.qty_close {
+	position: absolute;
+	left: auto;
+	right: 10px;
+	top: 10px;
+	z-index: 9999;
+}
+.svg_img.pro_svg {
+	width: 18px;
+	fill: $text-color;
+}
+a.wishlist {
+	.svg_img.pro_svg {
+		width: 16px;
+		height: 16px;
+	}
+}
+.eccart-pro-items {
+	li {
+		.gi-pro-content {
+			.qty-plus-minus {
+				width: 85px;
+				height: 35px;
+				margin-top: 7px;
+				padding: 7px 0;
+				border: 1px solid $border-color-1;
+				display: inline-block;
+				overflow: hidden;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background: $white;
+				border-radius: 30px;
+				.gi_qtybtn {
+					width: 40px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 100%;
+					cursor: pointer;
+					font-size: 20px;
+					color: $text-color;
+				}
+				input.qty-input {
+					background: transparent none repeat scroll 0 0;
+					border: medium none;
+					color: $title-color;
+					float: left;
+					font-size: 14px;
+					height: auto;
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					width: 32px;
+					outline: none;
+					font-weight: 400;
+					line-height: 35px;
+				}
+				.dec.gi_qtybtn {
+					border-right: 1px solid $border-color-1;
+				}
+				.inc.gi_qtybtn {
+					border-left: 1px solid $border-color-1;
+				}
+			}
+		}
+	}
+}
+.gi-pro-loader {
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	opacity: 0;
+	display: none;
+	background: url(../images/common/pro-loader.gif) no-repeat scroll 50% 50%;
+	background-color: rgba($white, 0.5);
+	background-size: 75px;
+}
+.pro-loading {
+	.gi-pro-loader {
+		opacity: 1;
+		display: block;
+	}
+}
+.gi-pro-opt-inner {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	padding: 0 15px;
+}
+.product-block {
+	display: grid;
+}
+
+/* Responsive Header */
+@media (max-width: 991px) {
+	.gi-product-inner{
+		.gi-pro-option{
+			background-color: $white;
+			bottom: -10px;		
+		}
+	}
+}

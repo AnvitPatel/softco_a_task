@@ -1,0 +1,343 @@
+/*-------------------------------------------------
+   Demo 2 Page CSS
+---------------------------------------------------*/
+$main-primary-color: $main-primary-color-2;
+.gi-pro-tab ul li.active a {
+	color: $main-primary-color;
+}
+.gi-pro-tab-nav {
+	.nav-item {
+		.nav-link.active {
+			color: $main-primary-color-2;
+		}
+		.nav-link {
+			&:hover {
+				color: $main-primary-color-2;
+			}
+		}
+	}
+}
+.gi-product-inner {
+	.gi-pro-content {
+		.gi-pro-title {
+			a {
+				&:hover {
+					color: $main-primary-color-2;
+				}
+			}
+		}
+	}
+}
+.gi-product-inner {
+	.gi-pro-image {
+		.gi-pro-actions {
+			.gi-btn-group {
+				&:hover {
+					background-color: $main-primary-color-2;
+				}
+			}
+			.compare.active,
+			.wishlist.active {
+				background-color: $main-primary-color-2;
+			}
+		}
+	}
+}
+.gi-shop-sidebar-2 {
+	.gi-sidebar-block {
+		.gi-sidebar-block-item {
+			.checked {
+				&:after {
+					border: 1px solid $main-primary-color-2;
+					background: $main-primary-color-2;
+				}
+			}
+		}
+	}
+}
+.gi-blog,
+.gi-blog-section {
+	.blog-info {
+		.detail {
+			label {
+				a {
+					&:hover {
+						color: $white;
+					}
+				}
+			}
+			.more-info a {
+				&:hover {
+					color: $main-primary-color-2;
+					i {
+						color: $main-primary-color-2;
+					}
+				}
+			}
+		}
+	}
+}
+.section-title {
+	.title-link {
+		a {
+			&:hover {
+				color: $main-primary-color-2;
+				i {
+					color: $main-primary-color-2;
+				}
+			}
+		}
+	}
+}
+.quickview-modal {
+	.modal-content {
+		.single-pro-img {
+			.single-slide {
+				background: #f7f7f7;
+			}
+		}
+	}
+}
+
+/*===== Hero section css =====*/
+.gi-hero {
+	.gi-main-content {
+		.gi-slider-content {
+			.gi-main-slider {
+				.slide-3 {
+					background-image: url(../img/hero-bg/3.jpg);
+					background-position: center;
+				}
+				.slide-4 {
+					background-image: url(../img/hero-bg/4.jpg);
+					background-position: center;
+				}
+			}
+		}
+	}
+	.swiper-buttons {
+		display: none;
+	}
+	.main-slider-dot {
+		.swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+			margin: 0 2.5px !important;
+			display: inline-block;
+			border-radius: 30px;
+			opacity: 1;
+			border: 1px solid $main-secondary-color;
+			box-shadow: none;
+			transition: all 0.3s ease 0s;
+			background-color: transparent;
+		}
+		.swiper-pagination-bullet.swiper-pagination-bullet-active {
+			background-color: $main-secondary-color;
+			width: 30px;
+		}
+	}
+
+	/*-----  Slider Style  -----*/
+	.slider-animation {
+		> * {
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			animation-name: fadeOutDown;
+		}
+	}
+	:root {
+		--transition: 0.75s cubic-bezier(0.255, 0.67, 0, 1.01);
+	}
+	.gi-slide-item {
+		overflow: hidden;
+		position: relative;
+		transition:
+			transform var(--transition),
+			box-shadow var(--transition);
+	}
+	.swiper-slide-active {
+		.slider-animation {
+			> * {
+				animation-name: fadeInUp;
+
+				&:nth-child(1) {
+					animation-delay: 1s;
+				}
+
+				&:nth-child(2) {
+					animation-delay: 1.5s;
+				}
+
+				&:nth-child(3) {
+					animation-delay: 2s;
+				}
+
+				&:nth-child(4) {
+					animation-delay: 2.5s;
+				}
+
+				&:nth-child(5) {
+					animation-delay: 3s;
+				}
+
+				&:nth-child(6) {
+					animation-delay: 3.5s;
+				}
+			}
+		}
+	}
+}
+
+/*===== Deal section css =====*/
+.gi-deal-section {
+	.section-title {
+		#dealend {
+			padding: 0;
+		}
+		.dealend-timer {
+			padding: 5px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			position: relative;
+			.dealend-timer {
+				background-color: $light-grey-bg;
+				border-radius: $main-border-radius;
+			}
+			.time-block {
+				margin-left: 10px;
+				position: relative;
+				display: flex;
+				font-size: 15px;
+				font-weight: 600;
+				line-height: 28px;
+				color: $title-color;
+				.day {
+					margin-left: 5px;
+					position: relative;
+					font-size: 14px;
+					font-weight: 400;
+					display: flex;
+					align-items: center;
+					line-height: 28px;
+					color: $title-color;
+				}
+				.time {
+					min-width: 20px;
+					position: relative;
+				}
+				.dots {
+					margin-top: -1px;
+					margin-left: 5px;
+					color: $title-color;
+				}
+			}
+		}
+	}
+}
+
+/*===== Top Selling, Banner, Top Rated section css =====*/
+.gi-all-product-content {
+	.slick-slide {
+		margin-top: 15px;
+		> div:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	.slick-arrow {
+		width: auto;
+		top: -62px;
+	}
+	.slick-arrow.slick-prev {
+		left: auto;
+		right: 30px;
+	}
+	.slick-arrow.slick-prev {
+		&:before {
+			content: "\f104";
+		}
+	}
+	.slick-arrow {
+		margin: 0 auto;
+		font-size: 0;
+		top: -45px;
+		position: absolute;
+		left: auto;
+		right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		z-index: 1;
+		&:before {
+			@include ease3;
+			content: "";
+			color: $main-secondary-color;
+			position: relative;
+			font-size: 24px;
+			font-family: "gIcons";
+			width: 100%;
+			line-height: 30px;
+			height: 30px;
+		}
+		&:hover {
+			&:before {
+				color: $main-primary-color-2;
+			}
+		}
+	}
+	.slick-arrow.slick-next {
+		right: 0;
+		&:before {
+			content: "\f105";
+		}
+	}
+}
+.gi-all-product-inner {
+	&:hover {
+		.gi-pro-content {
+			.add-to-cart {
+				opacity: 1;
+			}
+		}
+	}
+}
+.banner-block {
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+}
+.gi-pro-variation {
+	.gi-pro-variation-inner.gi-pro-variation-size {
+		.gi-pro-variation-content {
+			li.active {
+				background-color: $main-primary-color-2 !important;
+				color: $white !important;
+				border-color: $main-primary-color-2 !important;
+			}
+			li {
+				&:hover {
+					background-color: $main-primary-color-2 !important;
+					color: $white !important;
+					border-color: $main-primary-color-2 !important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	#gi-popnews-box{
+		width: 90%;
+	}
+}
+
+@media (max-width: 420px) {
+	.gi-hero {
+		.swiper-pagination {
+			display: none;
+		}
+	}
+}

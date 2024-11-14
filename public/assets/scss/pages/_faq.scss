@@ -1,0 +1,27 @@
+/*-------------------------------------------------
+   Faq Page CSS
+---------------------------------------------------*/
+.gi-accordion.style-1 {
+	.gi-accordion-item {
+		.gi-accordion-header {
+			&:after {
+				content: "\f107";
+				width: 15px;
+				height: 15px;
+				display: flex;
+				align-items: center;
+				font-family: "gIcons";
+				cursor: pointer;
+				font-size: 24px;
+				color: $title-color;
+				font-weight: 400;
+				position: absolute;
+				top: 20px;
+				right: 15px;
+			}
+		}
+	}
+	.gi-accordion-body.show {
+		display: block;
+	}
+}

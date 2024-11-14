@@ -1,0 +1,286 @@
+/*-------------------------------------------------
+   Demo 3 Page CSS
+---------------------------------------------------*/
+
+/*===== Hero section css =====*/
+.gi-hero {
+	.gi-main-content {
+		.gi-slider-content {
+			position: relative;
+			.gi-main-slider {
+				.slide-1 {
+					background-image: url(../img/hero-bg/5.jpg);
+					background-position: center;
+				}
+				.slide-2 {
+					background-image: url(../img/hero-bg/6.jpg);
+					background-position: center;
+				}
+				.slide-3 {
+					background-image: url(../img/hero-bg/7.jpg);
+					background-position: center;
+				}
+				.swiper-pagination {
+					height: 17px;
+					bottom: 0px;
+					z-index: 2;
+					&:after {
+						content: "";
+						width: 160px;
+						height: 38px;
+						margin: auto;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background-image: url(../img/bg/1.png);
+						z-index: -1;
+					}
+				}
+			}
+		}
+	}
+	.swiper-buttons {
+		display: none;
+	}
+	.main-slider-dot {
+		.swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+			margin: 0 2.5px !important;
+			display: inline-block;
+			border-radius: 15px;
+			opacity: 1;
+			border: 1px solid $main-secondary-color;
+			box-shadow: none;
+			transition: all 0.3s ease 0s;
+			background-color: transparent;
+		}
+		.swiper-pagination-bullet.swiper-pagination-bullet-active {
+			background-color: $main-secondary-color;
+			width: 30px;
+		}
+	}
+
+	/*-----  Slider Style  -----*/
+	.slider-animation {
+		>* {
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			animation-name: fadeOutDown;
+		}
+	}
+	:root {
+		--transition: .75s cubic-bezier(0.255, 0.670, 0.000, 1.010);
+	}
+	.gi-slide-item {
+		overflow: hidden;
+		position: relative;
+		transition: transform var(--transition), box-shadow var(--transition);
+	}
+	.swiper-slide-active {
+		.slider-animation {
+			>* {
+				animation-name: fadeInUp;
+				&:nth-child(1) {
+					animation-delay: 1s;
+				}
+				&:nth-child(2) {
+					animation-delay: 1.5s;
+				}
+				&:nth-child(3) {
+					animation-delay: 2s;
+				}
+				&:nth-child(4) {
+					animation-delay: 2.5s;
+				}
+				&:nth-child(5) {
+					animation-delay: 3s;
+				}
+				&:nth-child(6) {
+					animation-delay: 3.5s;
+				}
+			}
+		}
+	}
+}
+.gi-pro-image-outer{
+	transition: all 0.3s ease 0s;
+}
+.w-50{
+	width: 50px !important;
+}
+/*===== Deal section css =====*/
+.gi-deal-section {
+	.section-title {
+		#dealend {
+			padding: 0;
+		}
+		.dealend-timer {
+			padding: 5px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			position: relative;
+			.dealend-timer {
+				background-color: $light-grey-bg;
+				border-radius: $main-border-radius;
+			}
+			.time-block {
+				margin-left: 10px;
+				position: relative;
+				display: flex;
+				font-size: 15px;
+				font-weight: 600;
+				line-height: 28px;
+				color: $title-color;
+				.day {
+					margin-left: 5px;
+					position: relative;
+					font-size: 14px;
+					font-weight: 400;
+					display: flex;
+					align-items: center;
+					line-height: 28px;
+					color: $title-color;
+				}
+				.time {
+					min-width: 20px;
+					position: relative;
+				}
+				.dots {
+					margin-top: -1px;
+					margin-left: 5px;
+					color: $title-color;
+				}
+			}
+		}
+	}
+}
+/*===== Top Selling, Banner, Top Rated section css =====*/
+.gi-all-product-content {
+	.slick-arrow {
+		width: auto;
+		top: -62px;
+	}
+	.slick-arrow.slick-prev {
+		left: auto;
+		right: 45px;
+	}
+	.slick-arrow.slick-prev{
+		&:before {
+			content: "\f104";
+		}
+	}
+	.slick-arrow {
+		margin: 0 auto;
+		font-size: 0;
+    	top: -45px;
+		position: absolute;
+		left: auto;
+		right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		z-index: 1;
+		&:before {
+			@include ease3;
+			content: "";
+			color: $main-secondary-color;
+			position: relative;
+			font-size: 24px;
+			font-family: "gIcons";
+			width: 100%;
+			line-height: 30px;
+			height: 30px;
+		}
+		&:hover {
+			&:before {
+				color: $main-primary-color;
+			}
+		}
+	}
+	.slick-arrow.slick-next{
+		right: 15px;
+		&:before {
+			content: "\f105";
+		}
+	}
+}
+.gi-all-product-inner {
+	&:hover {
+		.gi-pro-content {
+			.add-to-cart {
+				opacity: 1;
+			}
+		}
+	}
+	.label {
+		width: 11px;
+		height: 11px;
+		position: absolute;
+		top: 7px;
+		right: 7px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.dot {
+			width: 8px;
+			height: 8px;
+			display: block;
+			border-radius: 50%;
+		}
+	}
+	.veg {
+		.dot {
+			background-color: #46c389;
+		}
+	}
+	.nonveg {
+		.dot {
+			background-color: #ff9898;
+		}
+	}
+}
+
+.banner-block {
+	img {
+		width: 100%;
+		transform: scale(1);
+		transition: .3s ease-in-out;
+	}
+	&:hover {
+		img {
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+	}
+}
+
+/*  Demo 1 Responsive style  */
+@media (max-width: 767px) {
+	.gi-hero {
+		.gi-category-block {
+			padding: 0 15px 15px 15px;
+			grid-template-columns: repeat(auto-fill, calc(33.33% - 10px));
+			grid-row-gap: 15px;
+			grid-column-gap: 15px;
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.gi-hero {
+		.gi-category-block {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, calc(50% - 8px));
+			.gi-cat-box.more {
+				display: block;
+			}
+		}
+		.swiper-pagination {
+			display: none;
+		}
+	}
+}

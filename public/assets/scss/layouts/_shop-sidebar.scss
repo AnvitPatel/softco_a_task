@@ -1,0 +1,240 @@
+/**  Shop Sidebar  **/
+.gi-cat-icon {
+	img {
+		width: 50px !important;
+	}
+}
+.gi-open {
+	transform: translateX(0) !important;
+}
+
+.gi-shop-sidebar,
+.gi-shop-sidebar-2 {
+	.gi-blog-sidebar-wrap {
+		padding: 30px;
+		border: 1px solid $border-color-grey;
+		border-radius: $main-border-radius;
+	}
+	.gi-blog-search {
+		height: 50px;
+		width: 100%;
+		margin-bottom: 30px;
+		padding: 0;
+		box-shadow: none;
+		outline: none;
+		border: 1px solid $border-color-grey;
+		color: $title-color;
+		position: relative;
+		border-radius: $main-border-radius;
+		overflow: hidden;
+		.gi-blog-search-form {
+			display: flex;
+			align-items: center;
+			background: $white;
+		}
+		.form-control {
+			display: block;
+			width: 100%;
+			min-height: 48px;
+			height: 48px;
+			padding: 0 20px;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1;
+			color: $text-color;
+			background-color: transparent;
+			border: none;
+			letter-spacing: 0;
+		}
+		.submit {
+			position: relative;
+			height: 48px;
+			justify-content: center;
+			width: 60px;
+			color: $title-color;
+		}
+	}
+	.gi-sidebar-block {
+		.gi-sidebar-block-item {
+			input {
+				&:checked ~ .checked::after {
+					display: block;
+				}
+			}
+			a {
+				i {
+					width: 20px;
+					height: 20px;
+					margin-right: 7px;
+					font-size: 17px;
+				}
+				.products {
+					color: $text-color-999;
+					font-size: 13px;
+				}
+			}
+			.checked {
+				&:after {
+					left: -1px;
+					top: -1px;
+					width: 18px;
+					height: 18px;
+					border: 1px solid $main-primary-color;
+					content: "\f00c";
+					position: absolute;
+					display: none;
+					background: $main-primary-color;
+					font-family: "gIcons";
+					font-size: 10px;
+					color: $white;
+					line-height: 16px;
+					text-align: center;
+				}
+			}
+		}
+		.gi-sidebar-block-item {
+			.gi-sidebar-block-img {
+				margin-right: 15px;
+				img {
+					width: 100px;
+					border-radius: $main-border-radius;
+				}
+			}
+			.gi-sidebar-block-detial {
+				.gi-blog-title {
+					a {
+						color: $text-color;
+						font-size: 16px;
+						letter-spacing: 0;
+						line-height: 22px;
+						font-weight: 600;
+					}
+				}
+				.gi-blog-date {
+					margin-bottom: 5px;
+					font-size: 14px;
+					color: $text-color-999;
+					line-height: 1;
+					letter-spacing: 0;
+				}
+				a {
+					font-size: 14px;
+					color: $main-primary-color;
+				}
+			}
+		}
+	}
+	.gi-sidebar-block.color-block {
+		.gi-sidebar-block-item {
+			.gi-clr-block {
+				&:hover {
+					opacity: 1;
+				}
+			}
+			.checked {
+				&:after {
+					width: 24px;
+					height: 18px;
+					left: -1px;
+					top: 50%;
+					border: 1px solid transparent;
+					content: "\f00c";
+					position: absolute;
+					display: none;
+					background: transparent;
+					font-family: "gIcons";
+					font-size: 12px;
+					color: $white;
+					line-height: 16px;
+					text-align: center;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+}
+
+.gi-grid-list {
+	.gi-gl-btn {
+		.grid-btn.active {
+			background: $main-primary-color;
+			border: 1px solid $main-primary-color;
+			border-radius: 5px;
+			i {
+				color: $white;
+			}
+		}
+	}
+}
+
+/* Toggle filter sidebar */
+.gi-filter-sidebar {
+	@include custom-scroll-bar;
+}
+.filter-sidebar-open {
+	transform: translateX(0) !important;
+}
+
+/* Price slider block */
+.gi-price-range-slider {
+	.noUi-target {
+		cursor: pointer;
+		&:focus {
+			outline: none;
+		}
+	}
+	.noUi-horizontal {
+		height: 4px;
+		margin-bottom: 5px;
+		.noUi-handle {
+			top: -6px;
+			right: -15px;
+			width: 16px;
+			height: 16px;
+			background: $white;
+			border: 2px solid $main-primary-color;
+			border-radius: 50%;
+			box-shadow: unset;
+			cursor: pointer;
+			transition: transform 0.1s;
+			&:hover {
+				background: $main-primary-color;
+			}
+		}
+	}
+	.noUi-connect {
+		background: $text-color;
+	}
+	.noUi-base {
+		background: $light-grey-bg;
+	}
+	.noUi-handle.noUi-handle-upper {
+		right: -2px;
+	}
+}
+
+@media only screen and (max-width: 1399px) {
+	.gi-banner-side {
+		.gi-banner-block-side-2 {
+			height: 300px;
+		}
+	}
+}
+@media only screen and (max-width: 991px) {
+	.gi-shop-sidebar-2 {
+		transform: translateX(-100%);
+		.gi-banner-side {
+			height: auto;
+		}
+	}
+	.gi-shop-sidebar-2 {
+		.gi-close-btn {
+			display: block;
+		}
+	}
+}
+@media only screen and (max-width: 360px) {
+	.gi-shop-sidebar-2 {
+		width: 300px;
+	}
+}

@@ -1,0 +1,49 @@
+/*=======  Quick View ========*/
+.quickview-modal {
+	.qty_close {
+		width: 10px;
+		height: 10px;
+		background: url(../img/icons/close.svg);
+		background-size: 100%;
+	}
+}
+.quickview-pro-content {
+	.gi-pro-variation {
+		.gi-pro-variation-content {
+			ul {
+				li {
+					&:hover {
+						a {
+							color: $white;
+						}
+					}
+				}
+				li.active {
+					background-color: $main-primary-color !important;
+					color: $white !important;
+					border-color: $main-primary-color !important;
+					a {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	.gi-quickview-qty {
+		.qty-plus-minus {
+			.gi-qtybtn {
+				width: 30px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				color: $text-color;
+			}
+			input.qty-input {
+				background: transparent none repeat scroll 0 0;
+				border: medium none;
+			}
+		}
+	}
+}

@@ -1,0 +1,267 @@
+/*-------------------------------------------------
+  Single product Page CSS
+---------------------------------------------------*/
+.list-circle{
+	list-style-type: circle;
+}
+.gi-single-product {
+	margin-bottom: 0;
+	/*-----  Single Product  -----*/
+	.single-pro-img {
+		.gi-360-lbl {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			z-index: 1;
+			border-radius: 50%;
+			cursor: pointer;
+			height: 40px;
+			width: 40px;
+			text-align: center;
+			align-content: center;
+			display: grid;
+			opacity: .7;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.gi-video-icon {
+			position: absolute;
+			display: grid;
+			top: 15px;
+			right: 15px;
+			height: 40px;
+			width: 40px;
+			text-align: center;
+			align-content: center;
+			cursor: pointer;
+			z-index: 1;
+			opacity: 0.7;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.space-6 {
+		>div {
+			margin-top: 30px;
+			&:nth-child(-n + 2) {
+				margin-top: 0;
+			}
+		}
+	}
+	.single-nav-thumb {
+		.slick-list {
+			margin: 0 -8px;
+		}
+		.single-slide {
+			display: block !important;
+		}
+		.slick-slide {
+			img {
+				border: 1px solid transparent;
+				transition: all 0.3s ease 0s;
+				cursor: pointer;
+				border-radius: $main-border-radius;
+			}
+			&:hover {
+				img {
+					border-color: $main-primary-color;
+				}
+			}
+		}
+		.slick-slide.slick-current.slick-active {
+			img {
+				border-color: $main-primary-color;
+			}
+		}
+		.slick-arrow {
+			top: 42%;
+		}
+		.slick-arrow.slick-prev {
+			left: 0;
+			right: auto;
+		}
+		.slick-arrow {
+			position: absolute;
+			top: 55%;
+			left: auto;
+			right: auto;
+			margin: 0 auto;
+			font-size: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 30px;
+			height: 30px;
+			padding: 0;
+			z-index: 1;
+			transform: translateY(-50%);
+			&:before {
+				content: "";
+				color: $text-color;
+				position: relative;
+				font-size: 30px;
+				font-family: "EcIcons";
+				width: 100%;
+				line-height: 30px;
+				height: 30px;
+			}
+		}
+		.slick-arrow.slick-prev {
+			&:before {
+				content: "\f104";
+				font-family: $gIcons;
+			}
+		}
+		.slick-arrow.slick-next {
+			right: 0;
+			left: auto;
+
+			&:before {
+				content: "\f105";
+				font-family: $gIcons;
+			}
+		}
+	}
+	.single-pro-content {
+		p {
+			font-size: 14px;
+			color: $title-color;
+			margin: 0 0 12px;
+			font-weight: 600;
+
+			span {
+				font-weight: 400;
+			}
+		}
+
+		.single-para {
+			font-weight: 400;
+			color: $title-color;
+			line-height: 26px;
+		}
+
+		.gi-single-rating-wrap {
+			i.ecicon {
+				margin-right: 2px;
+				line-height: 20px;
+				font-size: 16px;
+				float: unset;
+			}
+		}
+		.gi-read-review {
+			line-height: 17px;
+		}
+		.gi-pro-variation {
+			.gi-pro-variation-inner {
+				.gi-pro-variation-content {
+					li.active {
+						background-color: $main-primary-color !important;
+						color: $white !important;
+						border-color: $main-primary-color !important;
+					}
+				}
+			}
+			.gi-pro-variation-inner.gi-pro-variation-color {
+				.gi-pro-variation-content {
+					li {
+						padding: 2px;
+						border-radius: 30px;
+						opacity: .7;
+						background-color: transparent;
+						span {
+							width: 100%;
+							height: 100%;
+							display: block;
+							border-radius: 30px;
+						}
+					}
+					.active {
+						border: 1px solid $title-color;
+					}
+				}
+			}
+		}
+		.gi-single-qty {
+			.qty-plus-minus {
+				.ms_qtybtn {
+					width: 40px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 100%;
+					cursor: pointer;
+					font-size: 22px;
+					color: $title-color;
+				}
+				input.qty-input {
+					background: transparent none repeat scroll 0 0;
+					border: medium none;
+					color: $title-color;
+					float: left;
+					font-size: 15px;
+					height: auto;
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					width: 40px;
+					outline: none;
+					font-weight: 500;
+				}
+				.dec.ms_qtybtn {
+					border-right: 1px solid $border-color-grey;
+				}
+				.inc.ms_qtybtn {
+					border-left: 1px solid $border-color-grey;
+				}
+			}
+			.gi-btn-group {
+				&:hover {
+					i {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	/*-----  Add More Product  -----*/
+	.single-add-more {
+		.add-more-item {
+			&:hover {
+				a {
+					opacity: 1;
+				}
+			}
+			.add-more-img {
+				img {
+					width: 75px;
+				}
+			}
+		}
+	}
+	.gi-single-pro-tab-nav {
+		.nav-tabs {
+			li.active {
+				a{
+					color: $white;
+				    background-color: $main-primary-color;
+				    border: 1px solid $main-primary-color;				
+				}
+			}
+		}
+	}
+	.gi-single-pro-tab-content {
+		.gi-ratting-content {
+			.gi-ratting-input {
+				input,
+				textarea {
+					&::placeholder {
+						color: $text-color-999;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

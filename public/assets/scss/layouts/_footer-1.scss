@@ -1,0 +1,40 @@
+/*-------------------------------------------------
+    Site Footer Section
+---------------------------------------------------*/
+.gi-footer {
+	.footer-top {
+		.gi-footer-contact {
+			.gi-footer-widget {
+				.gi-footer-links {
+					li {
+						&:first-child {
+							align-items: self-start;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.gi-heading-res {
+	display: none;
+}
+
+/* Responsive footer css */
+@media (max-width: 991px) {
+	.gi-heading-res {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+		display: block;
+		text-align: right;
+	}
+	.gi-footer-links.gi-footer-dropdown {
+		display: none;
+		padding: 0 0 20px 0;
+	}
+}

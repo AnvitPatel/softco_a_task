@@ -1,0 +1,16 @@
+/** Start Contact Section **/
+.gi-contact {
+  form{
+    .form-group {
+      input, textarea {
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+        &::placeholder {
+          color: $text-color-999;
+        }
+      }
+    }
+  }
+}

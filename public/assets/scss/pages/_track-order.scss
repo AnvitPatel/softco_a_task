@@ -1,0 +1,58 @@
+/*-------------------------------------------------
+  Track Order Page CSS
+---------------------------------------------------*/
+.gi-track {
+	.gi-step {
+		&:hover {
+			color: $title-color;;
+			text-decoration: none;
+			.gi-step-indicator {
+				-webkit-transition: all 0.25s ease-in-out;
+				transition: all 0.25s ease-in-out;
+				border-color: transparent;
+				background-color: $border-color-2;
+			}
+			.gi-step-icon {
+				color: $text-color;
+			}
+		}
+	}	
+	.has-indicator {
+		padding-right: 1.5rem;
+		padding-left: 2.375rem;
+		.gi-step-indicator {
+			top: 50%;
+			margin-top: -.75rem;
+		}
+	}	
+	.gi-step-active {
+		color: $title-color;
+		pointer-events: none;
+		cursor: default;
+		font-weight: 500;
+		&:hover {
+			color: $title-color;
+			pointer-events: none;
+			cursor: default;
+			.gi-step-icon {
+				color: $main-primary-color;
+			}
+		}
+		.gi-step-icon {
+			color: $main-primary-color;
+		}
+	}	
+	.gi-step-completed{
+		&:hover {
+			.gi-step-indicator {
+				border-color: transparent;
+				background-color: $main-primary-color;
+				color: $white;
+				line-height: 1.25rem;
+				i {
+					line-height: 23px;
+				}
+			}
+		}
+	}
+}

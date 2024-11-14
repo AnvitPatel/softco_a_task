@@ -1,0 +1,58 @@
+/*===== Cart sideabr css =====*/
+.gi-open-cart {
+  overflow: hidden;
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  &:before {
+    height: 100%;
+    width: 100;
+    background: #000;
+    opacity: 0.7;
+    position: absolute;
+    z-index: 998;
+    content: '';
+  }
+}
+
+.gi-side-cart {
+  @include custom-scroll-bar;
+  transform: translateX(100%);
+  .gi-cart-inner {
+    .gi-cart-pro-items {
+      li {
+        .gi-pro-content {
+          .qty-plus-minus {
+            .dec.ms_qtybtn {
+              border-right: 1px solid $border-color-1;
+            }
+            .gi-qtybtn {
+              width: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+              cursor: pointer;
+              font-size: 20px;
+              color: $text-color;
+            }
+          }
+          input.qty-input {
+            background: transparent none repeat scroll 0 0;
+            border: medium none;
+            color: $text-color;
+            float: left;
+            font-size: 14px;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            width: 32px;
+            outline: none;
+            font-weight: 400;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+  }
+}

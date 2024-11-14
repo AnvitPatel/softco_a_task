@@ -1,0 +1,33 @@
+/*===== Category section css =====*/
+.gi-category-shop {
+	.gi-category-block {
+		padding: 0 !important;
+		border: 0 !important;
+	}
+}
+.gi-category {
+	.gi-category-block, .gi-category-block-2 {
+		display: flex;
+		.gi-cat-box {
+			&:hover {
+				&:after {
+					top: 50%;
+				}
+			}
+			&:after {
+				@include ease3;
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(360deg, $white, $white, transparent);
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+			.gi-cat-icon {
+				box-shadow: 0 5px 15px rgba(88, 110, 125, 0.1);
+			}
+		}
+	}
+}

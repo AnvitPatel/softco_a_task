@@ -1,0 +1,29 @@
+/*-------------------------------------------------
+  Breadcrumb Style CSS
+---------------------------------------------------*/
+.gi-breadcrumb-list {
+	li.active {
+		color: $main-primary-color;
+	}
+	.gi-breadcrumb-item.active {
+		&::before {
+			color: $main-primary-color;
+		}
+	}
+}
+.gi-breadcrumb-item {
+	display: flex;
+	+ {
+		.gi-breadcrumb-item {
+			padding-left: 7px;
+			&::before {
+				display: inline-block;
+				padding-right: 7px;
+				color: $title-color;
+				content: "\f105";
+				font-family: $gIcons;
+				font-size: 15px;
+			}
+		}
+	}
+}
